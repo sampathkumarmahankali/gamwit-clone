@@ -1,3 +1,5 @@
+"use client"
+
 import { Clock, Zap, Database, Layers, Settings, DollarSign, Brain, Award } from "lucide-react"
 
 export default function Testimonials() {
@@ -105,26 +107,59 @@ export default function Testimonials() {
         <div className="mt-20 text-center animate-fade-in-up animation-delay-400">
           <h3 className="text-3xl font-bold text-slate-900 mb-12">Awards and Recognition</h3>
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-white p-6 rounded-2xl shadow-lg border border-slate-200 hover:shadow-xl transition-all duration-500 hover:scale-105 animate-fade-in-up animation-delay-600">
-              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4 animate-pulse group-hover:scale-110 transition-transform duration-300">
-                <Award className="h-8 w-8 text-blue-600" />
+            <div className="bg-slate-800 p-6 rounded-2xl shadow-lg border border-slate-700 hover:shadow-xl transition-all duration-500 hover:scale-105 animate-fade-in-up animation-delay-600 group">
+              <div className="flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                <img 
+                  src="/awards/esr-b2b-award.png" 
+                  alt="ESR B2B Award"
+                  className="h-16 w-auto object-contain"
+                  onError={(e) => {
+                    const target = e.target as HTMLImageElement;
+                    target.style.display = 'none';
+                    const fallback = target.parentElement?.querySelector('.fallback-icon') as HTMLElement;
+                    if (fallback) fallback.style.display = 'flex';
+                  }}
+                />
+                <Award className="h-8 w-8 text-blue-400 fallback-icon" style={{ display: 'none' }} />
               </div>
-              <h4 className="font-bold text-slate-900 mb-2">ESR B2B Award</h4>
-              <p className="text-sm text-slate-600">Nominated as Data and AI Partner in 2022 and 2023</p>
+              <h4 className="font-bold text-white mb-2">ESR B2B Award</h4>
+              <p className="text-sm text-slate-300">Nominated as Data and AI Partner in 2022 and 2023</p>
             </div>
-            <div className="bg-white p-6 rounded-2xl shadow-lg border border-slate-200 hover:shadow-xl transition-all duration-500 hover:scale-105 animate-fade-in-up animation-delay-800">
-              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4 animate-pulse group-hover:scale-110 transition-transform duration-300">
-                <Award className="h-8 w-8 text-green-600" />
+            <div className="bg-slate-800 p-6 rounded-2xl shadow-lg border border-slate-700 hover:shadow-xl transition-all duration-500 hover:scale-105 animate-fade-in-up animation-delay-800 group">
+              <div className="flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                <img 
+                  src="/awards/vixio-finalist-2024.png" 
+                  alt="Vixio Finalist 2024"
+                  className="h-16 w-auto object-contain"
+                  onError={(e) => {
+                    const target = e.target as HTMLImageElement;
+                    target.style.display = 'none';
+                    const fallback = target.parentElement?.querySelector('.fallback-icon') as HTMLElement;
+                    if (fallback) fallback.style.display = 'flex';
+                  }}
+                />
+                <Award className="h-8 w-8 text-green-400 fallback-icon" style={{ display: 'none' }} />
               </div>
-              <h4 className="font-bold text-slate-900 mb-2">Vixio Finalist 2024</h4>
-              <p className="text-sm text-slate-600">Finalist in the Compliance Innovator of the Year 2024 category</p>
+              <h4 className="font-bold text-white mb-2">Vixio Finalist 2024</h4>
+              <p className="text-sm text-slate-300">Finalist in the Compliance Innovator of the Year 2024 category</p>
             </div>
-            <div className="bg-white p-6 rounded-2xl shadow-lg border border-slate-200 hover:shadow-xl transition-all duration-500 hover:scale-105 animate-fade-in-up animation-delay-1000">
-              <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4 animate-pulse group-hover:scale-110 transition-transform duration-300">
-                <Award className="h-8 w-8 text-purple-600" />
+            <div className="bg-slate-800 p-6 rounded-2xl shadow-lg border border-slate-700 hover:shadow-xl transition-all duration-500 hover:scale-105 animate-fade-in-up animation-delay-1000 group">
+              <div className="flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                <img 
+                  src="/awards/esr-north-america-2024.png" 
+                  alt="ESR North America 2024"
+                  className="h-16 w-auto object-contain"
+                  onError={(e) => {
+                    const target = e.target as HTMLImageElement;
+                    target.style.display = 'none';
+                    const fallback = target.parentElement?.querySelector('.fallback-icon') as HTMLElement;
+                    if (fallback) fallback.style.display = 'flex';
+                  }}
+                />
+                <Award className="h-8 w-8 text-purple-400 fallback-icon" style={{ display: 'none' }} />
               </div>
-              <h4 className="font-bold text-slate-900 mb-2">ESR North America 2024</h4>
-              <p className="text-sm text-slate-600">Nominated as Compliance Technology Provider in 2024</p>
+              <h4 className="font-bold text-white mb-2">ESR North America 2024</h4>
+              <p className="text-sm text-slate-300">Nominated as Compliance Technology Provider in 2024</p>
             </div>
           </div>
         </div>
