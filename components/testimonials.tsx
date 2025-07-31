@@ -230,7 +230,7 @@ export default function Testimonials() {
                   }}
                   >
                     <advantage.icon className="h-8 w-8 text-white group-hover:scale-110 transition-transform duration-300 ease-out" />
-                  </div>
+              </div>
 
                   {/* Floating Elements */}
                   <div className="absolute -top-2 -right-2 w-4 h-4 bg-gradient-to-r from-green-400 to-blue-400 rounded-full animate-ping opacity-75"></div>
@@ -368,7 +368,7 @@ export default function Testimonials() {
                 </div>
                 <h4 className="font-bold text-white mb-3 text-lg">ESR North America 2024</h4>
                 <p className="text-sm text-slate-300 leading-relaxed">Nominated as Compliance Technology Provider in 2024</p>
-              </div>
+            </div>
             </div>
           </div>
         </div>

@@ -1,29 +1,64 @@
 import Header from "@/components/header"
 import Footer from "@/components/footer"
 import { Button } from "@/components/ui/button"
-import { ArrowRight, Brain, TrendingUp, Users, DollarSign, Target, Shield, Zap, CheckCircle, XCircle, BarChart3, Clock, AlertTriangle, Star, Award, Database, Eye, Search, AlertCircle, Scale, FileText, Mail, UserCheck, Users2, Calendar, Activity, Lock, Gavel, AlertCircle as AlertCircleIcon, BarChart, PieChart, LineChart, Activity as ActivityIcon, Settings, Layers } from "lucide-react"
+import { ArrowRight, Brain, TrendingUp, Users, DollarSign, Target, Shield, Zap, CheckCircle, XCircle, BarChart3, Clock, AlertTriangle, Star, Award, Database, Eye, Search, AlertCircle, Scale, FileText, Mail, UserCheck, Users2, Calendar, Activity, Lock, Gavel, AlertCircle as AlertCircleIcon, BarChart, PieChart, LineChart, Activity as ActivityIcon, Settings, Layers, Sparkles, Rocket } from "lucide-react"
 
 export default function Dashboards() {
   return (
-    <main className="min-h-screen bg-white">
+    <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Header />
 
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-br from-slate-50 to-blue-50">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <section className="py-24 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
+        {/* Enhanced Animated Background */}
+        <div className="absolute inset-0">
+          {/* Grid Pattern */}
+          <div className="absolute inset-0 bg-grid-slate-100/10 [mask-image:linear-gradient(0deg,white,rgba(255,255,255,0.6))]"></div>
+          
+          {/* Floating Elements */}
+          <div className="absolute top-20 left-10 w-32 h-32 bg-blue-400/10 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute bottom-20 right-10 w-40 h-40 bg-purple-400/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
+          <div className="absolute top-1/2 left-1/4 w-24 h-24 bg-green-400/10 rounded-full blur-2xl animate-pulse delay-500"></div>
+          <div className="absolute top-1/3 right-1/4 w-16 h-16 bg-red-400/10 rounded-full blur-xl animate-pulse delay-1500"></div>
+          <div className="absolute bottom-1/3 left-1/3 w-20 h-20 bg-yellow-400/10 rounded-full blur-2xl animate-pulse delay-2000"></div>
+          
+          {/* Neural Network Pattern */}
+          <div className="absolute inset-0 opacity-20">
+            <svg className="w-full h-full" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <pattern id="neural-dashboards" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+                  <circle cx="10" cy="10" r="1" fill="currentColor" className="text-blue-400 animate-pulse"/>
+                  <line x1="0" y1="10" x2="20" y2="10" stroke="currentColor" strokeWidth="0.5" className="text-blue-400/30"/>
+                  <line x1="10" y1="0" x2="10" y2="20" stroke="currentColor" strokeWidth="0.5" className="text-blue-400/30"/>
+                </pattern>
+              </defs>
+              <rect width="100" height="100" fill="url(#neural-dashboards)"/>
+            </svg>
+          </div>
+        </div>
+
+        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center space-y-6 animate-fade-in-up">
-            <h1 className="text-4xl lg:text-6xl font-bold text-slate-900">
-              GAMWIT <span className="text-blue-600 bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent animate-gradient">DASHBOARDS</span>
+            <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-blue-500/20 to-purple-500/20 backdrop-blur-sm border border-blue-500/30 text-blue-300 rounded-full text-sm font-medium shadow-lg animate-fade-in-up">
+              <BarChart3 className="mr-2 h-4 w-4 animate-pulse" />
+              Analytics Platform
+            </div>
+            <h1 className="text-4xl lg:text-6xl font-bold text-white">
+              GAMWIT{" "}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400">
+                DASHBOARDS
+              </span>
             </h1>
-            <p className="text-xl text-slate-600 max-w-4xl mx-auto leading-relaxed animate-fade-in-up animation-delay-200">
+            <p className="text-xl text-slate-300 max-w-4xl mx-auto leading-relaxed animate-fade-in-up animation-delay-200">
               Get a Holistic View of Your Business
             </p>
             <div className="animate-fade-in-up animation-delay-400">
               <Button
                 size="lg"
-                className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-full font-bold shadow-xl hover:shadow-2xl transition-all duration-200"
+                className="bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white px-8 py-4 rounded-full font-bold shadow-xl hover:shadow-2xl transition-all duration-200 border-0"
               >
                 Try Dashboards
+                <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
             </div>
           </div>
@@ -31,97 +66,123 @@ export default function Dashboards() {
       </section>
 
       {/* Tailored Visuals Section */}
-      <section className="py-24 bg-white">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <section className="py-24 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
+        {/* Background Elements */}
+        <div className="absolute inset-0">
+          <div className="absolute inset-0 bg-grid-slate-100/10 [mask-image:linear-gradient(0deg,white,rgba(255,255,255,0.6))]"></div>
+          <div className="absolute top-1/4 right-1/4 w-32 h-32 bg-blue-400/10 rounded-full blur-3xl animate-pulse delay-500"></div>
+          <div className="absolute bottom-1/4 left-1/4 w-24 h-24 bg-purple-400/10 rounded-full blur-2xl animate-pulse delay-1000"></div>
+        </div>
+
+        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center space-y-8 mb-16 animate-fade-in-up">
-            <h2 className="text-4xl lg:text-5xl font-bold text-slate-900">
-              Tailored Visuals for Every Business Level
+            <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-green-500/20 to-blue-500/20 backdrop-blur-sm border border-green-500/30 text-green-300 rounded-full text-sm font-medium shadow-lg">
+              <Eye className="mr-2 h-4 w-4 animate-pulse" />
+              Customizable Views
+            </div>
+            <h2 className="text-4xl lg:text-5xl font-bold text-white">
+              Tailored Visuals for{" "}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-400">
+                Every Business Level
+              </span>
             </h2>
-            <p className="text-xl text-slate-600 max-w-4xl mx-auto leading-relaxed">
+            <p className="text-xl text-slate-300 max-w-4xl mx-auto leading-relaxed">
               GAMWIT's dashboards are fully customizable to fit the needs of every team—whether you're an executive, manager, or part of an operational team. Each level gets relevant insights, presented in a way that makes decision-making easier.
             </p>
           </div>
 
           <div className="grid lg:grid-cols-3 gap-12">
             {/* Strategic Dashboards */}
-            <div className="space-y-6 animate-fade-in-up">
-              <div className="flex items-center space-x-4 mb-4">
-                <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center">
-                  <BarChart className="h-6 w-6 text-blue-600" />
+            <div className="group relative bg-white/10 backdrop-blur-xl p-8 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-700 ease-out border border-slate-700/50 hover:border-slate-600/50 transform-gpu animate-fade-in-up">
+              <div className="flex items-center space-x-4 mb-6">
+                <div className="w-12 h-12 bg-gradient-to-r from-blue-500 via-cyan-500 to-blue-600 rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-500 ease-out group-hover:scale-110 group-hover:rotate-6">
+                  <BarChart className="h-6 w-6 text-white group-hover:scale-110 transition-transform duration-300 ease-out" />
                 </div>
-                <h3 className="text-2xl font-bold text-slate-900">Strategic Dashboards</h3>
+                <h3 className="text-2xl font-bold text-white group-hover:text-slate-100 transition-all duration-300 ease-out group-hover:scale-105">Strategic Dashboards</h3>
               </div>
-              <p className="text-lg text-slate-600 leading-relaxed">
+              <p className="text-lg text-slate-300 leading-relaxed group-hover:text-slate-200 transition-all duration-300 ease-out">
                 Get a high-level overview of your business goals, current progress, and future opportunities with forecasts and projections. Examples include:
               </p>
-              <ul className="space-y-2 text-slate-600">
+              <ul className="space-y-2 text-slate-300 mt-4">
                 <li className="flex items-center space-x-2">
-                  <CheckCircle className="h-4 w-4 text-green-500" />
+                  <CheckCircle className="h-4 w-4 text-green-400" />
                   <span>Executive Summary</span>
                 </li>
                 <li className="flex items-center space-x-2">
-                  <CheckCircle className="h-4 w-4 text-green-500" />
+                  <CheckCircle className="h-4 w-4 text-green-400" />
                   <span>Revenue Dashboard</span>
                 </li>
               </ul>
+              
+              {/* Floating Elements */}
+              <div className="absolute -top-2 -right-2 w-4 h-4 bg-gradient-to-r from-green-400 to-blue-400 rounded-full animate-ping opacity-75"></div>
+              <div className="absolute -bottom-2 -left-2 w-3 h-3 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full animate-ping delay-1000 opacity-75"></div>
             </div>
 
             {/* Tactical Dashboards */}
-            <div className="space-y-6 animate-fade-in-up animation-delay-200">
-              <div className="flex items-center space-x-4 mb-4">
-                <div className="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center">
-                  <PieChart className="h-6 w-6 text-green-600" />
+            <div className="group relative bg-white/10 backdrop-blur-xl p-8 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-700 ease-out border border-slate-700/50 hover:border-slate-600/50 transform-gpu animate-fade-in-up animation-delay-200">
+              <div className="flex items-center space-x-4 mb-6">
+                <div className="w-12 h-12 bg-gradient-to-r from-green-500 via-emerald-500 to-green-600 rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-500 ease-out group-hover:scale-110 group-hover:rotate-6">
+                  <PieChart className="h-6 w-6 text-white group-hover:scale-110 transition-transform duration-300 ease-out" />
                 </div>
-                <h3 className="text-2xl font-bold text-slate-900">Tactical Dashboards</h3>
+                <h3 className="text-2xl font-bold text-white group-hover:text-slate-100 transition-all duration-300 ease-out group-hover:scale-105">Tactical Dashboards</h3>
               </div>
-              <p className="text-lg text-slate-600 leading-relaxed">
+              <p className="text-lg text-slate-300 leading-relaxed group-hover:text-slate-200 transition-all duration-300 ease-out">
                 Spot issues in real-time with dynamic visualizations. Analyze trends, plan resources, and optimize product placement with historical and current data. Examples include:
               </p>
-              <ul className="space-y-2 text-slate-600">
+              <ul className="space-y-2 text-slate-300 mt-4">
                 <li className="flex items-center space-x-2">
-                  <CheckCircle className="h-4 w-4 text-green-500" />
+                  <CheckCircle className="h-4 w-4 text-green-400" />
                   <span>Host Management</span>
                 </li>
                 <li className="flex items-center space-x-2">
-                  <CheckCircle className="h-4 w-4 text-green-500" />
+                  <CheckCircle className="h-4 w-4 text-green-400" />
                   <span>Campaign Performance</span>
                 </li>
                 <li className="flex items-center space-x-2">
-                  <CheckCircle className="h-4 w-4 text-green-500" />
+                  <CheckCircle className="h-4 w-4 text-green-400" />
                   <span>Player & Product Summary</span>
                 </li>
               </ul>
+              
+              {/* Floating Elements */}
+              <div className="absolute -top-2 -right-2 w-4 h-4 bg-gradient-to-r from-green-400 to-blue-400 rounded-full animate-ping opacity-75"></div>
+              <div className="absolute -bottom-2 -left-2 w-3 h-3 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full animate-ping delay-1000 opacity-75"></div>
             </div>
 
             {/* Operational Dashboards */}
-            <div className="space-y-6 animate-fade-in-up animation-delay-400">
-              <div className="flex items-center space-x-4 mb-4">
-                <div className="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center">
-                  <LineChart className="h-6 w-6 text-purple-600" />
+            <div className="group relative bg-white/10 backdrop-blur-xl p-8 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-700 ease-out border border-slate-700/50 hover:border-slate-600/50 transform-gpu animate-fade-in-up animation-delay-400">
+              <div className="flex items-center space-x-4 mb-6">
+                <div className="w-12 h-12 bg-gradient-to-r from-purple-500 via-violet-500 to-purple-600 rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-500 ease-out group-hover:scale-110 group-hover:rotate-6">
+                  <LineChart className="h-6 w-6 text-white group-hover:scale-110 transition-transform duration-300 ease-out" />
                 </div>
-                <h3 className="text-2xl font-bold text-slate-900">Operational Dashboards</h3>
+                <h3 className="text-2xl font-bold text-white group-hover:text-slate-100 transition-all duration-300 ease-out group-hover:scale-105">Operational Dashboards</h3>
               </div>
-              <p className="text-lg text-slate-600 leading-relaxed">
+              <p className="text-lg text-slate-300 leading-relaxed group-hover:text-slate-200 transition-all duration-300 ease-out">
                 Keep your operations on track by monitoring performance metrics for specific business areas. Some of the dashboard examples are:
               </p>
-              <ul className="space-y-2 text-slate-600">
+              <ul className="space-y-2 text-slate-300 mt-4">
                 <li className="flex items-center space-x-2">
-                  <CheckCircle className="h-4 w-4 text-green-500" />
+                  <CheckCircle className="h-4 w-4 text-green-400" />
                   <span>Slots: Revenue & Activity</span>
                 </li>
                 <li className="flex items-center space-x-2">
-                  <CheckCircle className="h-4 w-4 text-green-500" />
+                  <CheckCircle className="h-4 w-4 text-green-400" />
                   <span>Table Games: Revenue & Activity</span>
                 </li>
                 <li className="flex items-center space-x-2">
-                  <CheckCircle className="h-4 w-4 text-green-500" />
+                  <CheckCircle className="h-4 w-4 text-green-400" />
                   <span>Floor Management</span>
                 </li>
                 <li className="flex items-center space-x-2">
-                  <CheckCircle className="h-4 w-4 text-green-500" />
+                  <CheckCircle className="h-4 w-4 text-green-400" />
                   <span>Player Behavior</span>
                 </li>
               </ul>
+              
+              {/* Floating Elements */}
+              <div className="absolute -top-2 -right-2 w-4 h-4 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full animate-ping opacity-75"></div>
+              <div className="absolute -bottom-2 -left-2 w-3 h-3 bg-gradient-to-r from-blue-400 to-cyan-400 rounded-full animate-ping delay-1000 opacity-75"></div>
             </div>
           </div>
         </div>
