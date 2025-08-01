@@ -61,6 +61,7 @@ export default function Footer() {
               <h4 className="text-white font-semibold text-sm uppercase tracking-wider">Company</h4>
               <div className="space-y-3">
                 <Link href="/about" className="block text-slate-300 hover:text-[#00ff88] transition-colors duration-200 text-sm font-medium">About GAMWIT</Link>
+                <Link href="/locations" className="block text-slate-300 hover:text-[#00ff88] transition-colors duration-200 text-sm font-medium">Locations</Link>
                 <Link href="/contact" className="block text-slate-300 hover:text-[#00ff88] transition-colors duration-200 text-sm font-medium">Contact Us</Link>
                 <Link href="/careers" className="block text-slate-300 hover:text-[#00ff88] transition-colors duration-200 text-sm font-medium">Careers</Link>
               </div>
@@ -102,22 +103,22 @@ export default function Footer() {
             </div>
             {/* Office Cards */}
             <div className="grid grid-cols-2 gap-4 w-full max-w-xs">
-              <div className="glassmorphism rounded-xl p-4 border border-slate-700/80 hover:border-[#00ff88] transition-all duration-300 hover:bg-white/10 flex items-center space-x-3">
-                <span className="w-3 h-3 bg-[#00ff88] rounded-full shadow-glow" />
-                <span className="text-slate-200 font-medium">Hyderabad</span>
-              </div>
-              <div className="glassmorphism rounded-xl p-4 border border-slate-700/80 hover:border-[#0099ff] transition-all duration-300 hover:bg-white/10 flex items-center space-x-3">
-                <span className="w-3 h-3 bg-[#0099ff] rounded-full shadow-glow" />
-                <span className="text-slate-200 font-medium">Bengaluru</span>
-              </div>
-              <div className="glassmorphism rounded-xl p-4 border border-slate-700/80 hover:border-[#a259ff] transition-all duration-300 hover:bg-white/10 flex items-center space-x-3">
-                <span className="w-3 h-3 bg-[#a259ff] rounded-full shadow-glow" />
-                <span className="text-slate-200 font-medium">USA</span>
-              </div>
-              <div className="glassmorphism rounded-xl p-4 border border-slate-700/80 hover:border-[#ffb300] transition-all duration-300 hover:bg-white/10 flex items-center space-x-3">
-                <span className="w-3 h-3 bg-[#ffb300] rounded-full shadow-glow" />
-                <span className="text-slate-200 font-medium">Australia</span>
-              </div>
+              <Link href="/locations" className="glassmorphism rounded-xl p-4 border border-slate-700/80 hover:border-[#00ff88] transition-all duration-300 hover:bg-white/10 flex items-center space-x-3 cursor-pointer group">
+                <span className="w-3 h-3 bg-[#00ff88] rounded-full shadow-glow group-hover:scale-110 transition-transform duration-200" />
+                <span className="text-slate-200 font-medium group-hover:text-[#00ff88] transition-colors duration-200">Hyderabad</span>
+              </Link>
+              <Link href="/locations" className="glassmorphism rounded-xl p-4 border border-slate-700/80 hover:border-[#0099ff] transition-all duration-300 hover:bg-white/10 flex items-center space-x-3 cursor-pointer group">
+                <span className="w-3 h-3 bg-[#0099ff] rounded-full shadow-glow group-hover:scale-110 transition-transform duration-200" />
+                <span className="text-slate-200 font-medium group-hover:text-[#0099ff] transition-colors duration-200">Bengaluru</span>
+              </Link>
+              <Link href="/locations" className="glassmorphism rounded-xl p-4 border border-slate-700/80 hover:border-[#a259ff] transition-all duration-300 hover:bg-white/10 flex items-center space-x-3 cursor-pointer group">
+                <span className="w-3 h-3 bg-[#a259ff] rounded-full shadow-glow group-hover:scale-110 transition-transform duration-200" />
+                <span className="text-slate-200 font-medium group-hover:text-[#a259ff] transition-colors duration-200">USA</span>
+              </Link>
+              <Link href="/locations" className="glassmorphism rounded-xl p-4 border border-slate-700/80 hover:border-[#ffb300] transition-all duration-300 hover:bg-white/10 flex items-center space-x-3 cursor-pointer group">
+                <span className="w-3 h-3 bg-[#ffb300] rounded-full shadow-glow group-hover:scale-110 transition-transform duration-200" />
+                <span className="text-slate-200 font-medium group-hover:text-[#ffb300] transition-colors duration-200">Australia</span>
+              </Link>
             </div>
             {/* Call to Action */}
             <div className="text-center space-y-4 pt-6 w-full">

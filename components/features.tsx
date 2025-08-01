@@ -136,7 +136,7 @@ export default function Features() {
           </p>
           
           {/* Enhanced Video Embed */}
-          <div className="max-w-4xl mx-auto mt-12 animate-fade-in-up animation-delay-600">
+          <div className="max-w-2xl mx-auto mt-12 animate-fade-in-up animation-delay-600">
             <div className="relative group">
               <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-3xl blur-3xl group-hover:blur-2xl transition-all duration-500"></div>
               <div className="relative aspect-video rounded-3xl overflow-hidden shadow-2xl hover:shadow-3xl transition-all duration-500 hover:scale-105 border border-slate-700/50">
@@ -151,8 +151,8 @@ export default function Features() {
                 
                 {/* Floating Play Button */}
                 <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <div className="w-20 h-20 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center shadow-2xl animate-pulse">
-                    <Play className="h-8 w-8 text-white ml-1" />
+                  <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center shadow-2xl animate-pulse">
+                    <Play className="h-6 w-6 text-white ml-1" />
                   </div>
                 </div>
               </div>

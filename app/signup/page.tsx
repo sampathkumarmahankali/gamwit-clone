@@ -63,7 +63,7 @@ export default function SignupPage() {
   const [isSuccess, setIsSuccess] = useState(false)
   
   const canvasRef = useRef<HTMLCanvasElement>(null)
-  const animationRef = useRef<number>()
+  const animationRef = useRef<number | undefined>(undefined)
 
   // Password strength calculation
   const calculatePasswordStrength = (password: string) => {
