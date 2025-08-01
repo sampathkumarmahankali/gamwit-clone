@@ -189,10 +189,17 @@ export default function Dashboards() {
       </section>
 
       {/* Challenges Section */}
-      <section className="py-24 bg-gradient-to-br from-slate-50 to-blue-50">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <section className="py-24 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
+        {/* Background Elements */}
+        <div className="absolute inset-0">
+          <div className="absolute inset-0 bg-grid-slate-100/10 [mask-image:linear-gradient(0deg,white,rgba(255,255,255,0.6))]"></div>
+          <div className="absolute top-1/4 left-1/4 w-32 h-32 bg-blue-400/10 rounded-full blur-3xl animate-pulse delay-500"></div>
+          <div className="absolute bottom-1/4 right-1/4 w-24 h-24 bg-purple-400/10 rounded-full blur-2xl animate-pulse delay-1000"></div>
+        </div>
+
+        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center space-y-8 mb-16 animate-fade-in-up">
-            <h2 className="text-4xl lg:text-5xl font-bold text-slate-900">
+            <h2 className="text-4xl lg:text-5xl font-bold text-white">
               In today's fast-paced iGaming and casino industry, businesses face challenges like:
             </h2>
           </div>
@@ -201,12 +208,12 @@ export default function Dashboards() {
             {/* Challenge 1 */}
             <div className="space-y-6 animate-fade-in-up">
               <div className="flex items-center space-x-4 mb-4">
-                <div className="w-12 h-12 bg-red-100 rounded-xl flex items-center justify-center">
-                  <Database className="h-6 w-6 text-red-600" />
+                <div className="w-12 h-12 bg-red-500/20 backdrop-blur-sm rounded-xl flex items-center justify-center border border-red-500/30">
+                  <Database className="h-6 w-6 text-red-400" />
                 </div>
-                <h3 className="text-xl font-bold text-slate-900">Data Integration</h3>
+                <h3 className="text-xl font-bold text-white">Data Integration</h3>
               </div>
-              <p className="text-slate-600">
+              <p className="text-slate-300">
                 Pulling together scattered data from different systems to create a unified view for meaningful insights.
               </p>
             </div>
@@ -214,12 +221,12 @@ export default function Dashboards() {
             {/* Challenge 2 */}
             <div className="space-y-6 animate-fade-in-up animation-delay-200">
               <div className="flex items-center space-x-4 mb-4">
-                <div className="w-12 h-12 bg-orange-100 rounded-xl flex items-center justify-center">
-                  <Layers className="h-6 w-6 text-orange-600" />
+                <div className="w-12 h-12 bg-orange-500/20 backdrop-blur-sm rounded-xl flex items-center justify-center border border-orange-500/30">
+                  <Layers className="h-6 w-6 text-orange-400" />
                 </div>
-                <h3 className="text-xl font-bold text-slate-900">Multiple Data Sources</h3>
+                <h3 className="text-xl font-bold text-white">Multiple Data Sources</h3>
               </div>
-              <p className="text-slate-600">
+              <p className="text-slate-300">
                 Handling multiple data sources efficiently without losing valuable information.
               </p>
             </div>
@@ -227,12 +234,12 @@ export default function Dashboards() {
             {/* Challenge 3 */}
             <div className="space-y-6 animate-fade-in-up animation-delay-400">
               <div className="flex items-center space-x-4 mb-4">
-                <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center">
-                  <BarChart3 className="h-6 w-6 text-blue-600" />
+                <div className="w-12 h-12 bg-blue-500/20 backdrop-blur-sm rounded-xl flex items-center justify-center border border-blue-500/30">
+                  <BarChart3 className="h-6 w-6 text-blue-400" />
                 </div>
-                <h3 className="text-xl font-bold text-slate-900">Quick Decisions</h3>
+                <h3 className="text-xl font-bold text-white">Quick Decisions</h3>
               </div>
-              <p className="text-slate-600">
+              <p className="text-slate-300">
                 Making quick, data-driven decisions, often hindered by limited data granularity and a lack of drill-down capabilities.
               </p>
             </div>
@@ -240,12 +247,12 @@ export default function Dashboards() {
             {/* Challenge 4 */}
             <div className="space-y-6 animate-fade-in-up animation-delay-600">
               <div className="flex items-center space-x-4 mb-4">
-                <div className="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center">
-                  <Users className="h-6 w-6 text-green-600" />
+                <div className="w-12 h-12 bg-green-500/20 backdrop-blur-sm rounded-xl flex items-center justify-center border border-green-500/30">
+                  <Users className="h-6 w-6 text-green-400" />
                 </div>
-                <h3 className="text-xl font-bold text-slate-900">Player Behavior</h3>
+                <h3 className="text-xl font-bold text-white">Player Behavior</h3>
               </div>
-              <p className="text-slate-600">
+              <p className="text-slate-300">
                 Understanding player behavior to enhance the player experience and retain high-value players.
               </p>
             </div>
@@ -253,12 +260,12 @@ export default function Dashboards() {
             {/* Challenge 5 */}
             <div className="space-y-6 animate-fade-in-up animation-delay-800">
               <div className="flex items-center space-x-4 mb-4">
-                <div className="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center">
-                  <TrendingUp className="h-6 w-6 text-purple-600" />
+                <div className="w-12 h-12 bg-purple-500/20 backdrop-blur-sm rounded-xl flex items-center justify-center border border-purple-500/30">
+                  <TrendingUp className="h-6 w-6 text-purple-400" />
                 </div>
-                <h3 className="text-xl font-bold text-slate-900">Forecasting & Optimization</h3>
+                <h3 className="text-xl font-bold text-white">Forecasting & Optimization</h3>
               </div>
-              <p className="text-slate-600">
+              <p className="text-slate-300">
                 Forecasting trends and optimizing operations without the flexibility to slice and analyze data effectively.
               </p>
             </div>
@@ -267,10 +274,17 @@ export default function Dashboards() {
       </section>
 
       {/* Advanced Analytics Platform Section */}
-      <section className="py-24 bg-white">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <section className="py-24 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
+        {/* Background Elements */}
+        <div className="absolute inset-0">
+          <div className="absolute inset-0 bg-grid-slate-100/10 [mask-image:linear-gradient(0deg,white,rgba(255,255,255,0.6))]"></div>
+          <div className="absolute top-1/4 left-1/4 w-32 h-32 bg-blue-400/10 rounded-full blur-3xl animate-pulse delay-500"></div>
+          <div className="absolute bottom-1/4 right-1/4 w-24 h-24 bg-purple-400/10 rounded-full blur-2xl animate-pulse delay-1000"></div>
+        </div>
+
+        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center space-y-8 mb-16 animate-fade-in-up">
-            <h2 className="text-4xl lg:text-5xl font-bold text-slate-900">
+            <h2 className="text-4xl lg:text-5xl font-bold text-white">
               Our advanced analytics platform gives you the edge to thrive in a competitive landscape with:
             </h2>
           </div>
@@ -304,12 +318,12 @@ export default function Dashboards() {
             ].map((feature, index) => (
               <div key={index} className="space-y-6 animate-fade-in-up" style={{ animationDelay: `${index * 200}ms` }}>
                 <div className="flex items-center space-x-4 mb-4">
-                  <div className={`w-12 h-12 bg-${feature.color}-100 rounded-xl flex items-center justify-center`}>
-                    <feature.icon className={`h-6 w-6 text-${feature.color}-600`} />
+                  <div className={`w-12 h-12 bg-${feature.color}-500/20 backdrop-blur-sm rounded-xl flex items-center justify-center border border-${feature.color}-500/30`}>
+                    <feature.icon className={`h-6 w-6 text-${feature.color}-400`} />
                   </div>
-                  <h3 className="text-xl font-bold text-slate-900">{feature.title}</h3>
+                  <h3 className="text-xl font-bold text-white">{feature.title}</h3>
                 </div>
-                <p className="text-slate-600">{feature.description}</p>
+                <p className="text-slate-300">{feature.description}</p>
               </div>
             ))}
           </div>
@@ -317,22 +331,29 @@ export default function Dashboards() {
       </section>
 
       {/* GAMWIT Advantage Section */}
-      <section className="py-24 bg-gradient-to-br from-slate-50 to-blue-50">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <section className="py-24 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
+        {/* Background Elements */}
+        <div className="absolute inset-0">
+          <div className="absolute inset-0 bg-grid-slate-100/10 [mask-image:linear-gradient(0deg,white,rgba(255,255,255,0.6))]"></div>
+          <div className="absolute top-1/4 left-1/4 w-32 h-32 bg-blue-400/10 rounded-full blur-3xl animate-pulse delay-500"></div>
+          <div className="absolute bottom-1/4 right-1/4 w-24 h-24 bg-purple-400/10 rounded-full blur-2xl animate-pulse delay-1000"></div>
+        </div>
+
+        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center space-y-8 mb-16 animate-fade-in-up">
-            <h2 className="text-4xl lg:text-5xl font-bold text-slate-900">
+            <h2 className="text-4xl lg:text-5xl font-bold text-white">
               The GAMWIT Advantage
             </h2>
-            <h3 className="text-2xl font-bold text-blue-600">Traditional Dashboards vs GAMWIT</h3>
+            <h3 className="text-2xl font-bold text-blue-400">Traditional Dashboards vs GAMWIT</h3>
           </div>
 
           <div className="overflow-x-auto">
-            <table className="w-full bg-white rounded-2xl shadow-lg">
+            <table className="w-full bg-white/10 backdrop-blur-xl rounded-2xl shadow-lg border border-slate-700/50">
               <thead>
-                <tr className="border-b border-slate-200">
-                  <th className="text-left p-6 font-bold text-slate-900">Features</th>
-                  <th className="text-left p-6 font-bold text-red-600">Traditional Dashboards</th>
-                  <th className="text-left p-6 font-bold text-green-600">GAMWIT</th>
+                <tr className="border-b border-slate-600/50">
+                  <th className="text-left p-6 font-bold text-white">Features</th>
+                  <th className="text-left p-6 font-bold text-red-400">Traditional Dashboards</th>
+                  <th className="text-left p-6 font-bold text-green-400">GAMWIT</th>
                 </tr>
               </thead>
               <tbody>
@@ -383,10 +404,10 @@ export default function Dashboards() {
                     gamwit: "Fast deployment with ready-to-use dashboards and quicker insights"
                   }
                 ].map((row, index) => (
-                  <tr key={index} className="border-b border-slate-100 hover:bg-slate-50 transition-colors">
-                    <td className="p-6 font-semibold text-slate-900">{row.feature}</td>
-                    <td className="p-6 text-slate-600">{row.traditional}</td>
-                    <td className="p-6 text-slate-600">{row.gamwit}</td>
+                  <tr key={index} className="border-b border-slate-600/30 hover:bg-white/5 transition-colors">
+                    <td className="p-6 font-semibold text-white">{row.feature}</td>
+                    <td className="p-6 text-slate-300">{row.traditional}</td>
+                    <td className="p-6 text-slate-300">{row.gamwit}</td>
                   </tr>
                 ))}
               </tbody>
@@ -396,10 +417,17 @@ export default function Dashboards() {
       </section>
 
       {/* Key Benefits Section */}
-      <section className="py-24 bg-white">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <section className="py-24 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
+        {/* Background Elements */}
+        <div className="absolute inset-0">
+          <div className="absolute inset-0 bg-grid-slate-100/10 [mask-image:linear-gradient(0deg,white,rgba(255,255,255,0.6))]"></div>
+          <div className="absolute top-1/4 left-1/4 w-32 h-32 bg-blue-400/10 rounded-full blur-3xl animate-pulse delay-500"></div>
+          <div className="absolute bottom-1/4 right-1/4 w-24 h-24 bg-purple-400/10 rounded-full blur-2xl animate-pulse delay-1000"></div>
+        </div>
+
+        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center space-y-8 mb-16 animate-fade-in-up">
-            <h2 className="text-4xl lg:text-5xl font-bold text-slate-900">
+            <h2 className="text-4xl lg:text-5xl font-bold text-white">
               Key Benefits
             </h2>
           </div>
@@ -451,12 +479,12 @@ export default function Dashboards() {
             ].map((benefit, index) => (
               <div key={index} className="space-y-6 animate-fade-in-up" style={{ animationDelay: `${index * 150}ms` }}>
                 <div className="flex items-center space-x-4 mb-4">
-                  <div className={`w-12 h-12 bg-${benefit.color}-100 rounded-xl flex items-center justify-center`}>
-                    <benefit.icon className={`h-6 w-6 text-${benefit.color}-600`} />
+                  <div className={`w-12 h-12 bg-${benefit.color}-500/20 backdrop-blur-sm rounded-xl flex items-center justify-center border border-${benefit.color}-500/30`}>
+                    <benefit.icon className={`h-6 w-6 text-${benefit.color}-400`} />
                   </div>
-                  <h3 className="text-xl font-bold text-slate-900">{benefit.title}</h3>
+                  <h3 className="text-xl font-bold text-white">{benefit.title}</h3>
                 </div>
-                <p className="text-slate-600">{benefit.description}</p>
+                <p className="text-slate-300">{benefit.description}</p>
               </div>
             ))}
           </div>
@@ -464,13 +492,20 @@ export default function Dashboards() {
       </section>
 
       {/* Dashboard Image Placeholders */}
-      <section className="py-24 bg-gradient-to-br from-slate-50 to-blue-50">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <section className="py-24 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
+        {/* Background Elements */}
+        <div className="absolute inset-0">
+          <div className="absolute inset-0 bg-grid-slate-100/10 [mask-image:linear-gradient(0deg,white,rgba(255,255,255,0.6))]"></div>
+          <div className="absolute top-1/4 left-1/4 w-32 h-32 bg-blue-400/10 rounded-full blur-3xl animate-pulse delay-500"></div>
+          <div className="absolute bottom-1/4 right-1/4 w-24 h-24 bg-purple-400/10 rounded-full blur-2xl animate-pulse delay-1000"></div>
+        </div>
+
+        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center space-y-8 mb-16 animate-fade-in-up">
-            <h2 className="text-4xl lg:text-5xl font-bold text-slate-900">
+            <h2 className="text-4xl lg:text-5xl font-bold text-white">
               Dashboard Visualizations
             </h2>
-            <p className="text-xl text-slate-600 max-w-4xl mx-auto leading-relaxed">
+            <p className="text-xl text-slate-300 max-w-4xl mx-auto leading-relaxed">
               Experience the power of GAMWIT's advanced analytics with our comprehensive dashboard suite
             </p>
           </div>
@@ -478,48 +513,48 @@ export default function Dashboards() {
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Strategic Dashboard Placeholder */}
             <div className="space-y-6 animate-fade-in-up">
-              <h3 className="text-2xl font-bold text-slate-900">Strategic Dashboard</h3>
-              <div className="bg-gradient-to-br from-blue-50 to-indigo-50 p-8 rounded-2xl border-2 border-dashed border-blue-300">
+              <h3 className="text-2xl font-bold text-white">Strategic Dashboard</h3>
+              <div className="bg-white/10 backdrop-blur-xl p-8 rounded-3xl border-2 border-dashed border-blue-400/50">
                 <div className="text-center space-y-4">
-                  <BarChart className="h-16 w-16 text-blue-600 mx-auto" />
-                  <p className="text-slate-600">Executive Summary Dashboard</p>
-                  <p className="text-sm text-slate-500">High-level business overview with KPIs and forecasts</p>
+                  <BarChart className="h-16 w-16 text-blue-400 mx-auto" />
+                  <p className="text-slate-300">Executive Summary Dashboard</p>
+                  <p className="text-sm text-slate-400">High-level business overview with KPIs and forecasts</p>
                 </div>
               </div>
             </div>
 
             {/* Tactical Dashboard Placeholder */}
             <div className="space-y-6 animate-fade-in-up animation-delay-200">
-              <h3 className="text-2xl font-bold text-slate-900">Tactical Dashboard</h3>
-              <div className="bg-gradient-to-br from-green-50 to-emerald-50 p-8 rounded-2xl border-2 border-dashed border-green-300">
+              <h3 className="text-2xl font-bold text-white">Tactical Dashboard</h3>
+              <div className="bg-white/10 backdrop-blur-xl p-8 rounded-3xl border-2 border-dashed border-green-400/50">
                 <div className="text-center space-y-4">
-                  <PieChart className="h-16 w-16 text-green-600 mx-auto" />
-                  <p className="text-slate-600">Campaign Performance Dashboard</p>
-                  <p className="text-sm text-slate-500">Real-time campaign analytics and optimization insights</p>
+                  <PieChart className="h-16 w-16 text-green-400 mx-auto" />
+                  <p className="text-slate-300">Campaign Performance Dashboard</p>
+                  <p className="text-sm text-slate-400">Real-time campaign analytics and optimization insights</p>
                 </div>
               </div>
             </div>
 
             {/* Operational Dashboard Placeholder */}
             <div className="space-y-6 animate-fade-in-up animation-delay-400">
-              <h3 className="text-2xl font-bold text-slate-900">Operational Dashboard</h3>
-              <div className="bg-gradient-to-br from-purple-50 to-violet-50 p-8 rounded-2xl border-2 border-dashed border-purple-300">
+              <h3 className="text-2xl font-bold text-white">Operational Dashboard</h3>
+              <div className="bg-white/10 backdrop-blur-xl p-8 rounded-3xl border-2 border-dashed border-purple-400/50">
                 <div className="text-center space-y-4">
-                  <LineChart className="h-16 w-16 text-purple-600 mx-auto" />
-                  <p className="text-slate-600">Player Behavior Dashboard</p>
-                  <p className="text-sm text-slate-500">Detailed player analytics and engagement metrics</p>
+                  <LineChart className="h-16 w-16 text-purple-400 mx-auto" />
+                  <p className="text-slate-300">Player Behavior Dashboard</p>
+                  <p className="text-sm text-slate-400">Detailed player analytics and engagement metrics</p>
                 </div>
               </div>
             </div>
 
             {/* Analytics Dashboard Placeholder */}
             <div className="space-y-6 animate-fade-in-up animation-delay-600">
-              <h3 className="text-2xl font-bold text-slate-900">Analytics Dashboard</h3>
-              <div className="bg-gradient-to-br from-orange-50 to-amber-50 p-8 rounded-2xl border-2 border-dashed border-orange-300">
+              <h3 className="text-2xl font-bold text-white">Analytics Dashboard</h3>
+              <div className="bg-white/10 backdrop-blur-xl p-8 rounded-3xl border-2 border-dashed border-orange-400/50">
                 <div className="text-center space-y-4">
-                  <ActivityIcon className="h-16 w-16 text-orange-600 mx-auto" />
-                  <p className="text-slate-600">Real-time Analytics Dashboard</p>
-                  <p className="text-sm text-slate-500">Live data visualization and predictive analytics</p>
+                  <ActivityIcon className="h-16 w-16 text-orange-400 mx-auto" />
+                  <p className="text-slate-300">Real-time Analytics Dashboard</p>
+                  <p className="text-sm text-slate-400">Live data visualization and predictive analytics</p>
                 </div>
               </div>
             </div>
@@ -528,8 +563,15 @@ export default function Dashboards() {
       </section>
 
       {/* Final CTA */}
-      <section className="py-24 bg-white">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <section className="py-24 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
+        {/* Background Elements */}
+        <div className="absolute inset-0">
+          <div className="absolute inset-0 bg-grid-slate-100/10 [mask-image:linear-gradient(0deg,white,rgba(255,255,255,0.6))]"></div>
+          <div className="absolute top-1/4 left-1/4 w-32 h-32 bg-blue-400/10 rounded-full blur-3xl animate-pulse delay-500"></div>
+          <div className="absolute bottom-1/4 right-1/4 w-24 h-24 bg-purple-400/10 rounded-full blur-2xl animate-pulse delay-1000"></div>
+        </div>
+
+        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-3xl p-12 text-white">
               <h3 className="text-3xl font-bold mb-4">Ready to Transform Your Analytics?</h3>

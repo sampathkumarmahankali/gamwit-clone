@@ -192,15 +192,15 @@ export default function Header() {
                               {items.length > 0 && (
                                 <div className="space-y-1">
                                   {items.map((item) => (
-                                    <Link
-                                      key={item.name}
-                                      href={item.href}
+                <Link
+                  key={item.name}
+                  href={item.href}
                                       className="block text-sm text-slate-300 hover:text-green-400 hover:bg-slate-800/50 px-3 py-2 rounded-lg transition-all duration-300"
                                       onClick={() => setIsProductsOpen(false)}
-                                    >
-                                      {item.name}
-                                    </Link>
-                                  ))}
+                >
+                  {item.name}
+                </Link>
+              ))}
                                 </div>
                               )}
                             </div>
@@ -297,12 +297,12 @@ export default function Header() {
           {/* CTA Buttons */}
           <div className="hidden md:flex items-center space-x-4">
             <Link href="/login">
-              <Button variant="ghost" className="text-white hover:text-green-400 hover:bg-slate-800/50 backdrop-blur-sm border border-slate-700/50">
+              <Button variant="ghost" className="text-white hover:text-green-400 hover:bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 cursor-pointer">
               Log in
             </Button>
             </Link>
             <Link href="/signup">
-              <Button className="group relative bg-gradient-to-r from-green-500 to-blue-500 hover:from-green-600 hover:to-blue-600 text-white px-6 py-3 rounded-full font-medium transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 overflow-hidden">
+              <Button className="group relative bg-gradient-to-r from-green-500 to-blue-500 hover:from-green-600 hover:to-blue-600 text-white px-6 py-3 rounded-full font-medium transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 overflow-hidden cursor-pointer">
                 <span className="relative z-10 flex items-center">
                   <Zap className="mr-2 h-4 w-4 group-hover:animate-pulse" />
               Try for Free
@@ -466,12 +466,12 @@ export default function Header() {
               
               <div className="pt-4 space-y-3">
                 <Link href="/login">
-                  <Button variant="ghost" className="w-full text-white hover:text-green-400 hover:bg-slate-800/50 backdrop-blur-sm border border-slate-700/50">
+                  <Button variant="ghost" className="w-full text-white hover:text-green-400 hover:bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 cursor-pointer">
                   Log in
                 </Button>
                 </Link>
                 <Link href="/signup">
-                  <Button className="w-full bg-gradient-to-r from-green-500 to-blue-500 hover:from-green-600 hover:to-blue-600 text-white rounded-full font-medium transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105">
+                  <Button className="w-full bg-gradient-to-r from-green-500 to-blue-500 hover:from-green-600 hover:to-blue-600 text-white rounded-full font-medium transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 cursor-pointer">
                     <Zap className="mr-2 h-4 w-4" />
                     Try for Free
                   </Button>

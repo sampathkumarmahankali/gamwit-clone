@@ -93,7 +93,7 @@ export default function CTA() {
         <div className="absolute top-20 left-10 w-32 h-32 bg-blue-400/10 rounded-full blur-3xl animate-pulse"></div>
         <div className="absolute bottom-20 right-10 w-40 h-40 bg-purple-400/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
         <div className="absolute top-1/2 left-1/4 w-24 h-24 bg-green-400/10 rounded-full blur-2xl animate-pulse delay-500"></div>
-      </div>
+            </div>
 
       <div className="relative mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
         {/* Header */}
@@ -107,11 +107,11 @@ export default function CTA() {
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400">
               Questions
             </span>
-          </h2>
+            </h2>
           <p className="text-xl text-slate-300 max-w-3xl mx-auto animate-fade-in-up animation-delay-400">
             Everything you need to know about GAMWIT's AI-powered gaming analytics platform
-          </p>
-        </div>
+            </p>
+          </div>
 
         {/* Search and Filter */}
         <div className="mb-12 space-y-6">
@@ -137,7 +137,7 @@ export default function CTA() {
                 </svg>
               </button>
             )}
-          </div>
+              </div>
 
           {/* Category Tabs */}
           <div className="relative">
@@ -161,9 +161,9 @@ export default function CTA() {
                     {category.count}
                   </span>
                 </button>
-              ))}
-            </div>
-            
+            ))}
+          </div>
+
             {/* Sliding Indicator */}
             <div className="absolute bottom-0 left-0 h-0.5 bg-gradient-to-r from-blue-500 to-purple-500 transition-all duration-300 ease-out"
                  style={{
