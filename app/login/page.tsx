@@ -42,7 +42,7 @@ export default function LoginPage() {
   const [isSuccess, setIsSuccess] = useState(false)
   
   const canvasRef = useRef<HTMLCanvasElement>(null)
-  const animationRef = useRef<number>()
+  const animationRef = useRef<number | null>(null)
   const logoRef = useRef<HTMLDivElement>(null)
 
   // Animated Background
@@ -245,18 +245,13 @@ export default function LoginPage() {
         <div className="text-center mb-8">
           <div
             ref={logoRef}
-            className="mb-6"
+            className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-blue-500/20 to-purple-500/20 backdrop-blur-xl rounded-2xl border border-blue-500/30 mb-6"
           >
-            <img src="/ball.png" alt="Floating Ball" className="h-12 w-12 object-contain mx-auto" />
+            <Rocket className="h-8 w-8 text-blue-400" />
           </div>
           <h1 className="text-4xl font-bold text-white mb-2">
-            <span className="text-5xl font-extrabold tracking-tight flex justify-center gap-0.5">
-              <span className="text-white">G</span>
-              <span className="text-[#00ff88]">A</span>
-              <span className="text-white">M</span>
-              <span className="text-white">W</span>
-              <span className="text-[#00ff88]">I</span>
-              <span className="text-white">T</span>
+            <span className="text-5xl font-extrabold tracking-tight bg-gradient-to-r from-[#00ff88] via-[#0099ff] to-[#a259ff] bg-clip-text text-transparent shadow-glow drop-shadow-lg animate-gradient-x">
+              GAMWIT
             </span>
       <style jsx>{`
         .shadow-glow {
