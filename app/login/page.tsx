@@ -245,14 +245,32 @@ export default function LoginPage() {
         <div className="text-center mb-8">
           <div
             ref={logoRef}
-            className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-blue-500/20 to-purple-500/20 backdrop-blur-xl rounded-2xl border border-blue-500/30 mb-6"
+            className="mb-6"
           >
-            <Rocket className="h-8 w-8 text-blue-400" />
+            <img src="/ball.png" alt="Floating Ball" className="h-12 w-12 object-contain mx-auto" />
           </div>
           <h1 className="text-4xl font-bold text-white mb-2">
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400">
-              GAMWIT
+            <span className="text-5xl font-extrabold tracking-tight flex justify-center gap-0.5">
+              <span className="text-white">G</span>
+              <span className="text-[#00ff88]">A</span>
+              <span className="text-white">M</span>
+              <span className="text-white">W</span>
+              <span className="text-[#00ff88]">I</span>
+              <span className="text-white">T</span>
             </span>
+      <style jsx>{`
+        .shadow-glow {
+          text-shadow: 0 0 16px #00ff88, 0 0 8px #0099ff;
+        }
+        .animate-gradient-x {
+          background-size: 200% 200%;
+          animation: gradient-x 4s ease-in-out infinite;
+        }
+        @keyframes gradient-x {
+          0%, 100% { background-position: left center; }
+          50% { background-position: right center; }
+        }
+      `}</style>
           </h1>
           <p className="text-slate-300">Sign in to your account</p>
         </div>

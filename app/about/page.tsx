@@ -1,6 +1,7 @@
 import Header from "@/components/header"
 import Footer from "@/components/footer"
 import { Button } from "@/components/ui/button"
+import Image from "next/image"
 import { ArrowRight, Brain, Users, Target, Award, Globe, Shield, TrendingUp, Zap, Database, Clock, Sparkles, Rocket, BarChart3 } from "lucide-react"
 
 export default function About() {
@@ -8,24 +9,38 @@ export default function About() {
     {
       name: "Aditya",
       role: "Co-Founder",
-      image: "/placeholder.svg?height=300&width=300",
+      image: "/aditya.jpg",
       bio: "Established BizAcuity in 2011 with a vision for data-driven business solutions.",
       gradient: "from-blue-500 via-cyan-500 to-blue-600",
     },
     {
       name: "Sudhir",
       role: "Co-Founder",
-      image: "/placeholder.svg?height=300&width=300",
+      image: "/sudhir.jpg",
       bio: "Pioneering gaming analytics and AI solutions for the industry.",
       gradient: "from-green-500 via-emerald-500 to-green-600",
     },
     {
       name: "Nishant",
       role: "Co-Founder",
-      image: "/placeholder.svg?height=300&width=300",
+      image: "/nishant.jpg",
       bio: "Driving innovation in gaming technology and business intelligence.",
       gradient: "from-purple-500 via-violet-500 to-purple-600",
-    },
+    },{
+  "name": "Rakesh Rajalwal",
+  "role": "Chief Architect",
+  "image": "/rakesh.jpg",
+  "bio": "17+ years in scalable systems, Data Management, BI, big data, AI/ML.",
+  "gradient": "from-blue-500 via-cyan-500 to-blue-600"
+},{
+  "name": "Rahul Jain",
+  "role": "Head of Delivery",
+  "image": "/rahul.jpg",
+  "bio": "Rahul leads project delivery, ensuring quality. Expertise in data, analytics, data warehousing, and AI/ML.",
+  "gradient": "from-green-500 via-emerald-500 to-green-600"
+},
+
+
   ]
 
   const companyValues = [
@@ -333,8 +348,14 @@ export default function About() {
 
                 {/* Content Container */}
                 <div className="relative z-10 space-y-6">
-                  <div className={`w-24 h-24 bg-gradient-to-r ${member.gradient} rounded-full flex items-center justify-center mx-auto border-4 border-slate-700/50 group-hover:border-slate-600/50 transition-colors animate-pulse`}>
-                    <Users className="w-12 h-12 text-white" />
+                  <div className={`w-24 h-24 flex items-center justify-center mx-auto overflow-hidden`}>
+                    <Image
+                      src={member.image}
+                      alt={member.name}
+                      width={300}
+                      height={300}
+                      className="object-cover object-top w-full h-full rounded-full"
+                    />
                   </div>
                   <div>
                     <h3 className="text-xl font-bold text-white">{member.name}</h3>
@@ -397,3 +418,4 @@ export default function About() {
     </main>
   )
 }
+
