@@ -106,7 +106,7 @@ export default function Header() {
       
       <nav className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-20 items-center justify-between">
-          {/* Animated Logo */}
+          {/* Logo */}
           <div className="flex items-center">
             <Link href="/" className="flex items-center space-x-3 group">
               <div className="relative">
@@ -120,13 +120,13 @@ export default function Header() {
             </Link>
           </div>
 
-          {/* Desktop Navigation */}
-          <div className="hidden md:block">
-            <div className="ml-10 flex items-baseline space-x-8">
+          {/* Centered Desktop Navigation */}
+          <div className="hidden md:flex items-center justify-center flex-1">
+            <div className="flex items-center space-x-4">
               {/* About Link */}
               <Link
                 href="/about"
-                className="relative text-white hover:text-green-400 px-4 py-2 text-sm font-medium transition-all duration-300 group"
+                className="relative text-white hover:text-green-400 px-4 py-2 text-sm font-medium transition-all duration-300 group flex items-center h-10"
               >
                 <span className="relative z-10">About</span>
                 <div className="absolute inset-0 bg-gradient-to-r from-green-500/20 to-blue-500/20 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
@@ -139,7 +139,7 @@ export default function Header() {
               <div className="relative" ref={productsRef}>
                 <button
                   onClick={() => setIsProductsOpen(!isProductsOpen)}
-                  className="relative text-white hover:text-green-400 px-4 py-2 text-sm font-medium transition-all duration-300 group"
+                  className="relative text-white hover:text-green-400 px-4 py-2 text-sm font-medium transition-all duration-300 group flex items-center h-10"
                 >
                   <span className="relative z-10 flex items-center">
                     <Brain className="mr-2 h-4 w-4 group-hover:rotate-12 transition-transform duration-300" />
@@ -192,15 +192,15 @@ export default function Header() {
                               {items.length > 0 && (
                                 <div className="space-y-1">
                                   {items.map((item) => (
-                <Link
-                  key={item.name}
-                  href={item.href}
+                                    <Link
+                                      key={item.name}
+                                      href={item.href}
                                       className="block text-sm text-slate-300 hover:text-green-400 hover:bg-slate-800/50 px-3 py-2 rounded-lg transition-all duration-300"
                                       onClick={() => setIsProductsOpen(false)}
-                >
-                  {item.name}
-                </Link>
-              ))}
+                                    >
+                                      {item.name}
+                                    </Link>
+                                  ))}
                                 </div>
                               )}
                             </div>
@@ -216,7 +216,7 @@ export default function Header() {
               <div className="relative" ref={solutionsRef}>
                 <button
                   onClick={() => setIsSolutionsOpen(!isSolutionsOpen)}
-                  className="relative text-white hover:text-green-400 px-4 py-2 text-sm font-medium transition-all duration-300 group"
+                  className="relative text-white hover:text-green-400 px-4 py-2 text-sm font-medium transition-all duration-300 group flex items-center h-10"
                 >
                   <span className="relative z-10 flex items-center">
                     <Target className="mr-2 h-4 w-4 group-hover:rotate-12 transition-transform duration-300" />
@@ -247,7 +247,7 @@ export default function Header() {
               <div className="relative" ref={resourcesRef}>
                 <button
                   onClick={() => setIsResourcesOpen(!isResourcesOpen)}
-                  className="relative text-white hover:text-green-400 px-4 py-2 text-sm font-medium transition-all duration-300 group"
+                  className="relative text-white hover:text-green-400 px-4 py-2 text-sm font-medium transition-all duration-300 group flex items-center h-10"
                 >
                   <span className="relative z-10 flex items-center">
                     <Globe className="mr-2 h-4 w-4 group-hover:rotate-12 transition-transform duration-300" />
@@ -277,7 +277,7 @@ export default function Header() {
               {/* FAQs Link */}
               <Link
                 href="/#faqs"
-                className="relative text-white hover:text-green-400 px-4 py-2 text-sm font-medium transition-all duration-300 group"
+                className="relative text-white hover:text-green-400 px-4 py-2 text-sm font-medium transition-all duration-300 group flex items-center h-10"
               >
                 <span className="relative z-10">FAQs</span>
                 <div className="absolute inset-0 bg-gradient-to-r from-green-500/20 to-blue-500/20 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
@@ -286,7 +286,7 @@ export default function Header() {
               {/* Contact Link */}
               <Link
                 href="/contact"
-                className="relative text-white hover:text-green-400 px-4 py-2 text-sm font-medium transition-all duration-300 group"
+                className="relative text-white hover:text-green-400 px-4 py-2 text-sm font-medium transition-all duration-300 group flex items-center h-10"
               >
                 <span className="relative z-10">Contact</span>
                 <div className="absolute inset-0 bg-gradient-to-r from-green-500/20 to-blue-500/20 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
