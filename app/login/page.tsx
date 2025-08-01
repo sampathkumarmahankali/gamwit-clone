@@ -42,7 +42,7 @@ export default function LoginPage() {
   const [isSuccess, setIsSuccess] = useState(false)
   
   const canvasRef = useRef<HTMLCanvasElement>(null)
-  const animationRef = useRef<number>()
+  const animationRef = useRef<number | null>(null)
   const logoRef = useRef<HTMLDivElement>(null)
 
   // Animated Background
@@ -250,9 +250,22 @@ export default function LoginPage() {
             <Rocket className="h-8 w-8 text-blue-400" />
           </div>
           <h1 className="text-4xl font-bold text-white mb-2">
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400">
+            <span className="text-5xl font-extrabold tracking-tight bg-gradient-to-r from-[#00ff88] via-[#0099ff] to-[#a259ff] bg-clip-text text-transparent shadow-glow drop-shadow-lg animate-gradient-x">
               GAMWIT
             </span>
+      <style jsx>{`
+        .shadow-glow {
+          text-shadow: 0 0 16px #00ff88, 0 0 8px #0099ff;
+        }
+        .animate-gradient-x {
+          background-size: 200% 200%;
+          animation: gradient-x 4s ease-in-out infinite;
+        }
+        @keyframes gradient-x {
+          0%, 100% { background-position: left center; }
+          50% { background-position: right center; }
+        }
+      `}</style>
           </h1>
           <p className="text-slate-300">Sign in to your account</p>
         </div>

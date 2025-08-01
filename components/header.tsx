@@ -117,11 +117,6 @@ export default function Header() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-r from-green-400 to-blue-400 rounded-full blur-xl opacity-0 group-hover:opacity-30 transition-opacity duration-500"></div>
               </div>
-              <div className="flex items-center space-x-1">
-                <span className="text-2xl font-bold text-white group-hover:text-green-400 transition-colors duration-300">G</span>
-                <span className="text-2xl font-bold text-green-400 group-hover:text-blue-400 transition-colors duration-300">A</span>
-                <span className="text-2xl font-bold text-white group-hover:text-purple-400 transition-colors duration-300">MWIT</span>
-              </div>
             </Link>
           </div>
 
