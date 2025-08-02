@@ -139,18 +139,44 @@ export default function Features() {
           <div className="max-w-2xl mx-auto mt-12 animate-fade-in-up animation-delay-600">
             <div className="relative group">
               <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-3xl blur-3xl group-hover:blur-2xl transition-all duration-500"></div>
-              <div className="relative aspect-video rounded-3xl overflow-hidden shadow-2xl hover:shadow-3xl transition-all duration-500 hover:scale-105 border border-slate-700/50">
+              <div className="relative aspect-video rounded-3xl overflow-hidden shadow-2xl hover:shadow-3xl transition-all duration-500 hover:scale-105 border border-slate-700/50 youtube-video-container">
                 <iframe
-                  src="https://www.youtube.com/embed/39jCz7GtSDw?si=bRdxYOx9LvrInBRB"
+                  src="https://www.youtube.com/embed/39jCz7GtSDw?si=bRdxYOx9LvrInBRB&autoplay=0&rel=0&modestbranding=1&showinfo=0&controls=1&enablejsapi=1&origin=https://gamwit.com"
                   title="GAMWIT Demo Video"
                   className="w-full h-full"
                   frameBorder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                   allowFullScreen
+                  loading="lazy"
+                  onLoad={() => {
+                    console.log('YouTube video loaded successfully')
+                  }}
+                  onError={(e) => {
+                    console.error('Video failed to load:', e)
+                    // Fallback to a placeholder or error message
+                    const target = e.target as HTMLIFrameElement
+                    target.style.display = 'none'
+                    const parent = target.parentElement
+                    if (parent) {
+                      parent.innerHTML = `
+                        <div class="w-full h-full flex items-center justify-center bg-slate-800/50 rounded-3xl">
+                          <div class="text-center text-slate-300">
+                            <div class="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                              <svg class="h-8 w-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M8 5v14l11-7z"/>
+                              </svg>
+                            </div>
+                            <p class="text-lg font-semibold mb-2">Video Unavailable</p>
+                            <p class="text-sm opacity-75">Please try again later or contact support</p>
+                          </div>
+                        </div>
+                      `
+                    }
+                  }}
                 ></iframe>
                 
                 {/* Floating Play Button */}
-                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
                   <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center shadow-2xl animate-pulse">
                     <Play className="h-6 w-6 text-white ml-1" />
                   </div>
