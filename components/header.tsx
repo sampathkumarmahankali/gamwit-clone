@@ -334,7 +334,7 @@ export default function Header() {
         {/* Mobile Navigation */}
         {isMenuOpen && (
           <div className="md:hidden" ref={mobileMenuRef}>
-            <div className="px-4 pt-4 pb-6 space-y-4 bg-slate-900/95 backdrop-blur-xl border-t border-slate-700/50 rounded-b-2xl shadow-2xl animate-fade-in-up">
+            <div className="px-4 pt-4 pb-6 space-y-4 bg-slate-900/95 backdrop-blur-xl border-t border-slate-700/50 rounded-b-2xl shadow-2xl animate-fade-in-up max-h-[80vh] overflow-y-auto scrollbar-thin scrollbar-thumb-slate-600 scrollbar-track-slate-800">
               {/* About Link */}
               <Link
                 href="/about"
@@ -365,7 +365,7 @@ export default function Header() {
                           <ChevronRight className={`h-4 w-4 transition-transform duration-300 ${isAiModelsOpen ? 'rotate-90' : ''}`} />
                         </button>
                         {isAiModelsOpen && (
-                          <div className="ml-4 space-y-1 animate-fade-in-up">
+                          <div className="ml-4 space-y-1 animate-fade-in-up max-h-48 overflow-y-auto scrollbar-thin scrollbar-thumb-slate-600 scrollbar-track-slate-800">
                             {items.map((item) => (
                               <Link
                                 key={item.name}
